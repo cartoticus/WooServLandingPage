@@ -96,6 +96,12 @@
   .quote-btn:hover { background: rgba(255,255,255,.26); }
   .quote-btn:focus-visible, .tile:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
 
+  /* Join banner */
+  .join-banner { display: block; max-width: 920px; margin: 22px auto 0; border-radius: 18px; overflow: hidden; box-shadow: 0 2px 4px rgba(31,27,24,.1), 0 14px 32px rgba(94,0,23,.25); transition: transform .15s ease; }
+  .join-banner:hover { transform: translateY(-3px); }
+  .join-banner:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+  .join-banner img { display: block; width: 100%; height: auto; }
+
   /* Link tiles */
   .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); padding-block: 36px 24px; }
   .tile {
@@ -135,7 +141,7 @@
   footer { text-align: center; color: var(--ink-soft); font-size: .85rem; padding-block: 24px 48px; }
 
   @media (prefers-reduced-motion: reduce) {
-    .quote-text, .tile { transition: none; }
+    .quote-text, .tile, .join-banner { transition: none; }
   }
 </style>
 </head>
@@ -158,6 +164,10 @@
       <button type="button" class="quote-btn" id="quote-btn" aria-label="Show a different quote">New quote</button>
     </div>
   </section>
+
+  <a class="join-banner" href="join/" aria-label="Join the team: sign up for Monument Bowling">
+    <img src="assets/join-banner.jpg" width="1800" height="595" alt="Join the team. Monument Bowling is looking for bowlers. All skill levels welcome. Sign up now at wooserv.tech/join">
+  </a>
 </header>
 
 <main class="wrap">
