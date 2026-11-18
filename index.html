@@ -114,6 +114,24 @@
   .tile .go { margin-top: 10px; font-weight: 700; font-size: .9rem; color: var(--red); }
   .tile .go::after { content: " →"; }
 
+  /* Standings */
+  .standings-wrap { padding-block: 8px 24px; }
+  .standings-card { background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 24px 22px; box-shadow: var(--shadow); }
+  .standings-card h2 { font-size: 1.4rem; margin: 0 0 4px; color: var(--red); }
+  .standings-meta { margin: 0 0 14px; color: var(--ink-soft); font-size: .85rem; }
+  .standings-note { margin: 0 0 14px; padding: 10px 14px; border-radius: 10px; background: var(--red-tint); color: var(--ink); font-size: .88rem; }
+  table.standings { width: 100%; border-collapse: collapse; font-size: .95rem; }
+  table.standings th { text-align: center; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); padding: 8px 10px; border-bottom: 2px solid var(--line); }
+  table.standings td { text-align: center; padding: 11px 10px; border-bottom: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+  table.standings th:nth-child(2), table.standings td:nth-child(2) { text-align: left; }
+  table.standings th:first-child, table.standings td:first-child { width: 2.4em; color: var(--ink-soft); }
+  table.standings tr:last-child td { border-bottom: 0; }
+  table.standings tr.us td { background: var(--red-tint); font-weight: 700; }
+  table.standings tr.us td:first-child { color: var(--red); }
+  .standings-more { display: inline-block; margin-top: 14px; font-weight: 700; font-size: .9rem; color: var(--red); text-decoration: none; }
+  .standings-more:hover { text-decoration: underline; }
+  .standings-more::after { content: " →"; }
+
   footer { text-align: center; color: var(--ink-soft); font-size: .85rem; padding-block: 24px 48px; }
 
   @media (prefers-reduced-motion: reduce) {
@@ -171,9 +189,17 @@
       <span class="go">Open the app</span>
     </a>
   </div>
+
+  <section class="standings-wrap" id="standings" aria-labelledby="standings-title">
+    <div class="standings-card">
+      <h2 id="standings-title">Team Standings</h2>
+      <div id="standings-body"><p class="standings-meta">Loading standings…</p></div>
+      <a class="standings-more" href="https://cartoticus.github.io/MonumentBowling/standings.html">Full standings &amp; results</a>
+    </div>
+  </section>
 </main>
 
-<footer class="wrap">Quotes from the Monument Bowling deck.</footer>
+<footer class="wrap">Quotes and standings from the Monument Bowling site.</footer>
 
 <script>
 (function () {
@@ -214,6 +240,45 @@
     .catch(function () { /* keep the default quote already in the HTML */ });
 
   btn.addEventListener("click", function () { show(true); });
+
+  // ---- Standings: loaded live from the Monument Bowling site (same data file it uses), bundled copy as fallback.
+  var S_LIVE = "https://cartoticus.github.io/MonumentBowling/assets/standings.js";
+  var S_LOCAL = "assets/standings.js";
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+    });
+  }
+  function loadScript(src, done) {
+    var el = document.createElement("script");
+    el.src = src;
+    el.onload = function () { done(true); };
+    el.onerror = function () { el.remove(); done(false); };
+    document.head.appendChild(el);
+  }
+  function renderStandings() {
+    var box = document.getElementById("standings-body");
+    var d = window.MB_STANDINGS;
+    if (!d || !d.teams || !d.teams.length) { box.innerHTML = '<p class="standings-meta">Standings are not available right now.</p>'; return; }
+    var teams = d.teams.map(function (t) {
+      var g = t.won + t.lost;
+      return Object.assign({}, t, { pct: g ? Math.round((t.won / g) * 1000) / 10 : 0 });
+    }).sort(function (a, b) { return b.won - a.won || b.pct - a.pct || b.pins - a.pins; });
+    var meta = [d.league, d.season, d.week ? "Week " + d.week + (d.totalWeeks ? " of " + d.totalWeeks : "") : "", d.asOf ? "as of " + d.asOf : ""]
+      .filter(Boolean).join(" · ");
+    var h = "";
+    if (d.notice) h += '<p class="standings-note">' + esc(d.notice) + "</p>";
+    h += '<p class="standings-meta">' + esc(meta) + "</p>";
+    h += '<table class="standings"><thead><tr><th>#</th><th>Team</th><th>Won</th><th>Lost</th><th>Win %</th></tr></thead><tbody>';
+    teams.forEach(function (t, i) {
+      h += '<tr class="' + (t.us ? "us" : "") + '"><td>' + (i + 1) + "</td><td>" + esc(t.name) + "</td><td>" + t.won + "</td><td>" + t.lost + "</td><td>" + t.pct.toFixed(1) + "</td></tr>";
+    });
+    box.innerHTML = h + "</tbody></table>";
+  }
+  loadScript(S_LIVE + "?t=" + Date.now(), function (ok) {
+    if (ok && window.MB_STANDINGS) return renderStandings();
+    loadScript(S_LOCAL, renderStandings);
+  });
 })();
 </script>
 </body>
