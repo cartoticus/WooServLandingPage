@@ -1,0 +1,1123 @@
+{
+  "name": "Bowling Quotes",
+  "version": "1.0",
+  "count": 111,
+  "source": "Daily Card deck (original writing)",
+  "moments": {
+    "strike": "after a strike or a double",
+    "spare": "after a spare, or when spare shooting matters",
+    "split": "when a split is left (see pins_left)",
+    "gutter": "after a gutter ball",
+    "tenth-frame": "in or after the 10th frame",
+    "adjusting": "when lanes change or a move is needed",
+    "mental-game": "between shots, before a big shot",
+    "bad-game": "after a low game or a rough frame",
+    "practice": "practice sessions, drills",
+    "technique": "form and release tips",
+    "team-and-fun": "league night, teammates, light moments",
+    "coaching": "youth bowling and coaches",
+    "game-start": "before a game begins",
+    "game-end": "after a game is finished",
+    "milestone": "a personal best or first 200"
+  },
+  "quotes": [
+    {
+      "id": "BWL-001",
+      "text": "Strikes get the cheers. Spares win the games.",
+      "category": "bowling-as-life",
+      "moments": [
+        "strike",
+        "spare",
+        "team-and-fun"
+      ],
+      "mood": "focused"
+    },
+    {
+      "id": "BWL-002",
+      "text": "Life will leave you a 7-10 sometimes. Pick the pin you can make and take the count.",
+      "category": "bowling-as-life",
+      "moments": [
+        "split"
+      ],
+      "mood": "gritty",
+      "pins_left": [
+        7,
+        10
+      ]
+    },
+    {
+      "id": "BWL-003",
+      "text": "The lanes change as the night goes on. So should you.",
+      "category": "bowling-as-life",
+      "moments": [
+        "adjusting"
+      ],
+      "mood": "reflective"
+    },
+    {
+      "id": "BWL-004",
+      "text": "Whatever happened in frames one through nine, the tenth deserves your full attention.",
+      "category": "bowling-as-life",
+      "moments": [
+        "tenth-frame"
+      ],
+      "mood": "focused"
+    },
+    {
+      "id": "BWL-005",
+      "text": "Hit your mark and trust the ball. You can't steer it once it's gone.",
+      "category": "bowling-as-life",
+      "moments": [
+        "mental-game"
+      ],
+      "mood": "calm"
+    },
+    {
+      "id": "BWL-006",
+      "text": "An open frame isn't the end of the game. It's just a number you have to bowl past.",
+      "category": "bowling-as-life",
+      "moments": [
+        "spare",
+        "bad-game"
+      ],
+      "mood": "gritty"
+    },
+    {
+      "id": "BWL-007",
+      "text": "Three in a row starts with one. Throw this one well.",
+      "category": "bowling-as-life",
+      "moments": [
+        "strike"
+      ],
+      "mood": "triumphant"
+    },
+    {
+      "id": "BWL-008",
+      "text": "Good bowlers read the lanes. Good people read the room.",
+      "category": "bowling-as-life",
+      "moments": [
+        "adjusting",
+        "team-and-fun"
+      ],
+      "mood": "reflective"
+    },
+    {
+      "id": "BWL-009",
+      "text": "Your follow-through says a lot about your commitment.",
+      "category": "bowling-as-life",
+      "moments": [
+        "mental-game"
+      ],
+      "mood": "focused"
+    },
+    {
+      "id": "BWL-010",
+      "text": "When the lane goes dry, don't panic. Move, adjust, and find the pocket again.",
+      "category": "bowling-as-life",
+      "moments": [
+        "strike",
+        "adjusting"
+      ],
+      "mood": "calm"
+    },
+    {
+      "id": "BWL-011",
+      "text": "Not every leave is fair. Every leave is yours.",
+      "category": "bowling-as-life",
+      "moments": [
+        "split"
+      ],
+      "mood": "gritty",
+      "pins_left": [
+        4,
+        6
+      ]
+    },
+    {
+      "id": "BWL-012",
+      "text": "Bowling teaches you that all ten things can fall down and it's still a good day.",
+      "category": "bowling-as-life",
+      "moments": [
+        "coaching"
+      ],
+      "mood": "warm"
+    },
+    {
+      "id": "BWL-013",
+      "text": "Make your spares and the strikes will take care of themselves.",
+      "category": "bowling-as-life",
+      "moments": [
+        "strike",
+        "spare"
+      ],
+      "mood": "focused"
+    },
+    {
+      "id": "BWL-014",
+      "text": "The ball goes where you send it. So do your words.",
+      "category": "bowling-as-life",
+      "moments": [
+        "technique",
+        "mental-game"
+      ],
+      "mood": "reflective"
+    },
+    {
+      "id": "BWL-015",
+      "text": "A bad game is one game. Bowl the next one like it's the first.",
+      "category": "bowling-as-life",
+      "moments": [
+        "bad-game"
+      ],
+      "mood": "gritty"
+    },
+    {
+      "id": "BWL-016",
+      "text": "The pocket isn't luck. It's a thousand practice shots paying you back.",
+      "category": "bowling-as-life",
+      "moments": [
+        "strike",
+        "practice"
+      ],
+      "mood": "triumphant"
+    },
+    {
+      "id": "BWL-017",
+      "text": "Slow your feet down and the whole lane slows down with them.",
+      "category": "bowling-as-life",
+      "moments": [
+        "adjusting"
+      ],
+      "mood": "calm"
+    },
+    {
+      "id": "BWL-018",
+      "text": "Look at the arrows, not the pins. Aim at what's close and let the rest follow.",
+      "category": "bowling-as-life",
+      "moments": [
+        "technique",
+        "adjusting"
+      ],
+      "mood": "focused"
+    },
+    {
+      "id": "BWL-019",
+      "text": "Some leaves you convert. Some you learn from. Both count as experience.",
+      "category": "bowling-as-life",
+      "moments": [
+        "split",
+        "bad-game"
+      ],
+      "mood": "reflective",
+      "pins_left": [
+        7,
+        10
+      ]
+    },
+    {
+      "id": "BWL-020",
+      "text": "Gutter balls are free comedy. Laugh, reset, and roll the next one.",
+      "category": "bowling-as-life",
+      "moments": [
+        "gutter",
+        "team-and-fun"
+      ],
+      "mood": "playful"
+    },
+    {
+      "id": "BWL-021",
+      "text": "The best part of league night isn't the score. It's the people on the bench.",
+      "category": "bowling-as-life",
+      "moments": [
+        "team-and-fun"
+      ],
+      "mood": "warm"
+    },
+    {
+      "id": "BWL-022",
+      "text": "Pressure in the tenth is a privilege. It means you're still in it.",
+      "category": "bowling-as-life",
+      "moments": [
+        "tenth-frame",
+        "mental-game"
+      ],
+      "mood": "focused"
+    },
+    {
+      "id": "BWL-023",
+      "text": "When the pattern breaks down, the bowlers who adjust keep scoring. The ones who complain keep complaining.",
+      "category": "bowling-as-life",
+      "moments": [
+        "adjusting"
+      ],
+      "mood": "gritty"
+    },
+    {
+      "id": "BWL-024",
+      "text": "Grip it lightly. Tension never helped a ball roll truer.",
+      "category": "bowling-as-life",
+      "moments": [
+        "mental-game"
+      ],
+      "mood": "calm"
+    },
+    {
+      "id": "BWL-025",
+      "text": "You can't bowl a 300 in one throw. You can only make the next good shot.",
+      "category": "bowling-as-life",
+      "moments": [
+        "strike"
+      ],
+      "mood": "reflective"
+    },
+    {
+      "id": "BWL-026",
+      "text": "The pins don't know your average. Throw it like tonight's your night.",
+      "category": "bowling-as-life",
+      "moments": [
+        "game-start",
+        "mental-game"
+      ],
+      "mood": "triumphant"
+    },
+    {
+      "id": "BWL-027",
+      "text": "Single-pin spares are where focus gets tested. Small target, big lesson.",
+      "category": "bowling-as-life",
+      "moments": [
+        "spare",
+        "mental-game"
+      ],
+      "mood": "focused"
+    },
+    {
+      "id": "BWL-028",
+      "text": "Every great bowler started out with bumpers and somebody cheering anyway.",
+      "category": "bowling-as-life",
+      "moments": [
+        "team-and-fun",
+        "coaching"
+      ],
+      "mood": "tender"
+    },
+    {
+      "id": "BWL-029",
+      "text": "Find your line. Then trust it until the lane tells you otherwise.",
+      "category": "bowling-as-life",
+      "moments": [
+        "adjusting",
+        "mental-game"
+      ],
+      "mood": "calm"
+    },
+    {
+      "id": "BWL-030",
+      "text": "A big split isn't a reason to quit. It's a reason to pick a pin and play for every point.",
+      "category": "bowling-as-life",
+      "moments": [
+        "split"
+      ],
+      "mood": "gritty",
+      "pins_left": [
+        6,
+        7,
+        10
+      ]
+    },
+    {
+      "id": "BWL-031",
+      "text": "Oil patterns are invisible, but they decide everything. So do habits.",
+      "category": "bowling-as-life",
+      "moments": [
+        "adjusting"
+      ],
+      "mood": "reflective"
+    },
+    {
+      "id": "BWL-032",
+      "text": "The approach matters as much as the release. How you get there decides where it goes.",
+      "category": "bowling-as-life",
+      "moments": [
+        "technique"
+      ],
+      "mood": "focused"
+    },
+    {
+      "id": "BWL-033",
+      "text": "Cheer for the other team's strikes too. Good bowling is good bowling.",
+      "category": "bowling-as-life",
+      "moments": [
+        "strike",
+        "team-and-fun"
+      ],
+      "mood": "warm"
+    },
+    {
+      "id": "BWL-034",
+      "text": "Doubles are built on one clean shot. Then another. That's the whole secret.",
+      "category": "bowling-as-life",
+      "moments": [
+        "strike"
+      ],
+      "mood": "triumphant"
+    },
+    {
+      "id": "BWL-035",
+      "text": "Breathe on the approach. Your best shot comes from your calmest step.",
+      "category": "bowling-as-life",
+      "moments": [
+        "mental-game"
+      ],
+      "mood": "calm"
+    },
+    {
+      "id": "BWL-036",
+      "text": "The pins reset every frame. So can you.",
+      "category": "bowling-as-life",
+      "moments": [
+        "bad-game"
+      ],
+      "mood": "gritty"
+    },
+    {
+      "id": "BWL-037",
+      "text": "You can't control the carry. You can control the shot that sent it there.",
+      "category": "bowling-as-life",
+      "moments": [
+        "strike"
+      ],
+      "mood": "reflective"
+    },
+    {
+      "id": "BWL-038",
+      "text": "Pick a target and commit. Halfway aimed is all the way missed.",
+      "category": "bowling-as-life",
+      "moments": [
+        "mental-game"
+      ],
+      "mood": "focused"
+    },
+    {
+      "id": "BWL-039",
+      "text": "Bowling: the only sport where you can wear rental shoes and still feel like a champion.",
+      "category": "bowling-as-life",
+      "moments": [
+        "team-and-fun"
+      ],
+      "mood": "playful"
+    },
+    {
+      "id": "BWL-040",
+      "text": "A missed spare doesn't make you a bad bowler. It makes you a bowler.",
+      "category": "bowling-as-life",
+      "moments": [
+        "spare",
+        "bad-game"
+      ],
+      "mood": "tender"
+    },
+    {
+      "id": "BWL-041",
+      "text": "The sound of a full rack crashing down is the best noise there is. Go make some.",
+      "category": "bowling-as-life",
+      "moments": [
+        "strike"
+      ],
+      "mood": "warm"
+    },
+    {
+      "id": "BWL-042",
+      "text": "The lanes don't get easier. You get better at reading them.",
+      "category": "bowling-as-life",
+      "moments": [
+        "adjusting"
+      ],
+      "mood": "gritty"
+    },
+    {
+      "id": "BWL-043",
+      "text": "Sometimes the smartest shot is the one that takes the sure pin, not the miracle.",
+      "category": "bowling-as-life",
+      "moments": [
+        "split"
+      ],
+      "mood": "reflective",
+      "pins_left": [
+        7,
+        10
+      ]
+    },
+    {
+      "id": "BWL-044",
+      "text": "Finish strong. The tenth frame remembers.",
+      "category": "bowling-as-life",
+      "moments": [
+        "tenth-frame"
+      ],
+      "mood": "focused"
+    },
+    {
+      "id": "BWL-045",
+      "text": "Let the ball do the work. Muscle doesn't make it hook. Timing does.",
+      "category": "bowling-as-life",
+      "moments": [
+        "technique"
+      ],
+      "mood": "calm"
+    },
+    {
+      "id": "BWL-046",
+      "text": "Clean games aren't about strikes. They're about never leaving a frame open.",
+      "category": "bowling-as-life",
+      "moments": [
+        "strike",
+        "spare"
+      ],
+      "mood": "triumphant"
+    },
+    {
+      "id": "BWL-047",
+      "text": "Teammates who clap for your spare are worth more than any trophy.",
+      "category": "bowling-as-life",
+      "moments": [
+        "spare",
+        "team-and-fun"
+      ],
+      "mood": "warm"
+    },
+    {
+      "id": "BWL-048",
+      "text": "Grind out the spares when the strikes won't come. That's how good nights get built on bad lanes.",
+      "category": "bowling-as-life",
+      "moments": [
+        "strike",
+        "spare",
+        "adjusting",
+        "bad-game"
+      ],
+      "mood": "gritty"
+    },
+    {
+      "id": "BWL-049",
+      "text": "Move your feet, not your target. Small adjustments, big results.",
+      "category": "bowling-as-life",
+      "moments": [
+        "adjusting"
+      ],
+      "mood": "reflective"
+    },
+    {
+      "id": "BWL-050",
+      "text": "If you're not having fun, you're holding the ball too tight.",
+      "category": "bowling-as-life",
+      "moments": [
+        "team-and-fun"
+      ],
+      "mood": "playful"
+    },
+    {
+      "id": "BWL-051",
+      "text": "Same routine, every shot. Consistency is boring, and boring is how you score.",
+      "category": "bowling-as-life",
+      "moments": [
+        "mental-game",
+        "practice"
+      ],
+      "mood": "focused"
+    },
+    {
+      "id": "BWL-052",
+      "text": "Your worst game still had good shots in it. Remember those too.",
+      "category": "bowling-as-life",
+      "moments": [
+        "bad-game"
+      ],
+      "mood": "tender"
+    },
+    {
+      "id": "BWL-053",
+      "text": "The breakpoint is where the ball makes its decision. Your job is getting it there.",
+      "category": "bowling-as-life",
+      "moments": [
+        "adjusting"
+      ],
+      "mood": "calm"
+    },
+    {
+      "id": "BWL-054",
+      "text": "Even the big four gets picked up once in a blue moon. Throw it like you believe it.",
+      "category": "bowling-as-life",
+      "moments": [
+        "split",
+        "mental-game"
+      ],
+      "mood": "gritty",
+      "pins_left": [
+        4,
+        6,
+        7,
+        10
+      ]
+    },
+    {
+      "id": "BWL-055",
+      "text": "You bowl against the pins, not the person on the next lane. Same goes for life.",
+      "category": "bowling-as-life",
+      "moments": [
+        "adjusting"
+      ],
+      "mood": "reflective"
+    },
+    {
+      "id": "BWL-056",
+      "text": "Spare shooting is where good averages are made. Do the unglamorous work.",
+      "category": "bowling-as-life",
+      "moments": [
+        "spare"
+      ],
+      "mood": "focused"
+    },
+    {
+      "id": "BWL-057",
+      "text": "Ten pins, one ball, and a lane full of possibilities.",
+      "category": "bowling-as-life",
+      "moments": [
+        "adjusting"
+      ],
+      "mood": "warm"
+    },
+    {
+      "id": "BWL-058",
+      "text": "Step up, see the shot, throw the shot. Confidence is just trust with a follow-through.",
+      "category": "bowling-as-life",
+      "moments": [
+        "mental-game"
+      ],
+      "mood": "triumphant"
+    },
+    {
+      "id": "BWL-059",
+      "text": "Shake off the gutter and bowl the next frame. Nobody ever won by replaying the last one.",
+      "category": "bowling-as-life",
+      "moments": [
+        "gutter",
+        "bad-game"
+      ],
+      "mood": "gritty"
+    },
+    {
+      "id": "BWL-060",
+      "text": "Watch the ball reaction before you change anything. The lane is telling you something.",
+      "category": "bowling-as-life",
+      "moments": [
+        "adjusting"
+      ],
+      "mood": "calm"
+    },
+    {
+      "id": "BWL-061",
+      "text": "Baby splits look easy and aren't. Plenty of things in life are like that.",
+      "category": "bowling-as-life",
+      "moments": [
+        "split"
+      ],
+      "mood": "reflective",
+      "pins_left": [
+        2,
+        7
+      ]
+    },
+    {
+      "id": "BWL-062",
+      "text": "Bowling shoes aren't a fashion statement. They're a commitment.",
+      "category": "bowling-as-life",
+      "moments": [
+        "mental-game",
+        "team-and-fun"
+      ],
+      "mood": "playful"
+    },
+    {
+      "id": "BWL-063",
+      "text": "Trust your release. Second-guessing at the line is how balls end up in the channel.",
+      "category": "bowling-as-life",
+      "moments": [
+        "gutter",
+        "mental-game"
+      ],
+      "mood": "focused"
+    },
+    {
+      "id": "BWL-064",
+      "text": "Kids don't remember their scores. They remember who high-fived them after every frame.",
+      "category": "bowling-as-life",
+      "moments": [
+        "team-and-fun",
+        "coaching"
+      ],
+      "mood": "warm"
+    },
+    {
+      "id": "BWL-065",
+      "text": "Strike out in the tenth and walk off like you meant it.",
+      "category": "bowling-as-life",
+      "moments": [
+        "strike",
+        "tenth-frame"
+      ],
+      "mood": "triumphant"
+    },
+    {
+      "id": "BWL-066",
+      "text": "Between shots, sit down, sip some water, and leave the last frame on the lane.",
+      "category": "bowling-as-life",
+      "moments": [
+        "split",
+        "tenth-frame",
+        "adjusting"
+      ],
+      "mood": "calm"
+    },
+    {
+      "id": "BWL-067",
+      "text": "Burned-up lanes reward patience. So do burned-out days.",
+      "category": "bowling-as-life",
+      "moments": [
+        "adjusting"
+      ],
+      "mood": "gritty"
+    },
+    {
+      "id": "BWL-068",
+      "text": "You learn more from one bad game than from three easy ones, if you're paying attention.",
+      "category": "bowling-as-life",
+      "moments": [
+        "bad-game"
+      ],
+      "mood": "reflective"
+    },
+    {
+      "id": "BWL-069",
+      "text": "Fix one thing at a time. Change everything and you'll never know what worked.",
+      "category": "bowling-as-life",
+      "moments": [
+        "practice"
+      ],
+      "mood": "focused"
+    },
+    {
+      "id": "BWL-070",
+      "text": "Some nights the pins just won't fall. That's not a verdict on you.",
+      "category": "bowling-as-life",
+      "moments": [
+        "bad-game"
+      ],
+      "mood": "tender"
+    },
+    {
+      "id": "BWL-071",
+      "text": "The best bowlers are the ones still smiling in the last game of the night.",
+      "category": "bowling-as-life",
+      "moments": [
+        "team-and-fun"
+      ],
+      "mood": "warm"
+    },
+    {
+      "id": "BWL-072",
+      "text": "Gutter balls build character. Lots and lots of character.",
+      "category": "bowling-as-life",
+      "moments": [
+        "gutter"
+      ],
+      "mood": "playful"
+    },
+    {
+      "id": "BWL-073",
+      "text": "Everybody has a corner pin that humbles them. Practice it anyway.",
+      "category": "bowling-as-life",
+      "moments": [
+        "split",
+        "bad-game",
+        "practice"
+      ],
+      "mood": "gritty",
+      "pins_left": [
+        10
+      ]
+    },
+    {
+      "id": "BWL-074",
+      "text": "Speed, rotation, target. Get one right at a time and the rest will follow.",
+      "category": "bowling-as-life",
+      "moments": [
+        "technique",
+        "practice"
+      ],
+      "mood": "calm"
+    },
+    {
+      "id": "BWL-075",
+      "text": "Sixty feet is a long way to doubt yourself. Make it a long way to believe.",
+      "category": "bowling-as-life",
+      "moments": [
+        "strike",
+        "mental-game"
+      ],
+      "mood": "triumphant"
+    },
+    {
+      "id": "BWL-076",
+      "text": "An average is just a story about the past. Tonight's game hasn't been written yet.",
+      "category": "bowling-as-life",
+      "moments": [
+        "game-start"
+      ],
+      "mood": "reflective"
+    },
+    {
+      "id": "BWL-077",
+      "text": "Win the frame in front of you. The game will add itself up.",
+      "category": "bowling-as-life",
+      "moments": [
+        "mental-game",
+        "game-start"
+      ],
+      "mood": "focused"
+    },
+    {
+      "id": "BWL-078",
+      "text": "League night is proof that grown-ups still need recess.",
+      "category": "bowling-as-life",
+      "moments": [
+        "team-and-fun"
+      ],
+      "mood": "warm"
+    },
+    {
+      "id": "BWL-079",
+      "text": "A 7-10 is just life saying, \"Show me how you handle this.\"",
+      "category": "bowling-as-life",
+      "moments": [
+        "split"
+      ],
+      "mood": "gritty",
+      "pins_left": [
+        7,
+        10
+      ]
+    },
+    {
+      "id": "BWL-080",
+      "text": "A smooth swing beats a strong arm every time.",
+      "category": "bowling-as-life",
+      "moments": [
+        "technique"
+      ],
+      "mood": "calm"
+    },
+    {
+      "id": "BWL-081",
+      "text": "The house shot makes you feel great. The sport shot makes you better.",
+      "category": "bowling-as-life",
+      "moments": [
+        "adjusting"
+      ],
+      "mood": "reflective"
+    },
+    {
+      "id": "BWL-082",
+      "text": "Some people golf to relax. We throw heavy balls at pins, which is cheaper than therapy.",
+      "category": "bowling-as-life",
+      "moments": [
+        "team-and-fun"
+      ],
+      "mood": "playful"
+    },
+    {
+      "id": "BWL-083",
+      "text": "Shoot spares straight. Save the fancy stuff for the strikes.",
+      "category": "bowling-as-life",
+      "moments": [
+        "strike",
+        "spare"
+      ],
+      "mood": "focused"
+    },
+    {
+      "id": "BWL-084",
+      "text": "You'll always remember your first 200. Remember who was there for it, too.",
+      "category": "bowling-as-life",
+      "moments": [
+        "milestone",
+        "team-and-fun"
+      ],
+      "mood": "tender"
+    },
+    {
+      "id": "BWL-085",
+      "text": "Score is what you earned. Effort is what you gave. Be proud of both.",
+      "category": "bowling-as-life",
+      "moments": [
+        "game-end"
+      ],
+      "mood": "triumphant"
+    },
+    {
+      "id": "BWL-086",
+      "text": "When the pocket disappears, go find it. It's still out there somewhere.",
+      "category": "bowling-as-life",
+      "moments": [
+        "strike",
+        "adjusting"
+      ],
+      "mood": "gritty"
+    },
+    {
+      "id": "BWL-087",
+      "text": "Bowling's the one place where knocking everything down is a good thing.",
+      "category": "bowling-as-life",
+      "moments": [
+        "team-and-fun"
+      ],
+      "mood": "warm"
+    },
+    {
+      "id": "BWL-088",
+      "text": "Stand tall at the line. Posture is half the shot.",
+      "category": "bowling-as-life",
+      "moments": [
+        "technique"
+      ],
+      "mood": "calm"
+    },
+    {
+      "id": "BWL-089",
+      "text": "Spares are bowling's second chances. Don't waste them.",
+      "category": "bowling-as-life",
+      "moments": [
+        "spare"
+      ],
+      "mood": "reflective"
+    },
+    {
+      "id": "BWL-090",
+      "text": "See it before you throw it. Every good shot starts in your head.",
+      "category": "bowling-as-life",
+      "moments": [
+        "mental-game"
+      ],
+      "mood": "focused"
+    },
+    {
+      "id": "BWL-091",
+      "text": "Leagues aren't won in week one. They're won by showing up every week after.",
+      "category": "bowling-as-life",
+      "moments": [
+        "team-and-fun"
+      ],
+      "mood": "gritty"
+    },
+    {
+      "id": "BWL-092",
+      "text": "My ball has a mind of its own. Some nights it's even a genius.",
+      "category": "bowling-as-life",
+      "moments": [
+        "team-and-fun"
+      ],
+      "mood": "playful"
+    },
+    {
+      "id": "BWL-093",
+      "text": "Help the new bowler pick out a ball. Somebody did it for you once.",
+      "category": "bowling-as-life",
+      "moments": [
+        "team-and-fun",
+        "coaching"
+      ],
+      "mood": "warm"
+    },
+    {
+      "id": "BWL-094",
+      "text": "Every lane has a story written in oil. Learn to read it.",
+      "category": "bowling-as-life",
+      "moments": [
+        "adjusting"
+      ],
+      "mood": "reflective"
+    },
+    {
+      "id": "BWL-095",
+      "text": "Hear that? That's preparation finding the pocket.",
+      "category": "bowling-as-life",
+      "moments": [
+        "strike"
+      ],
+      "mood": "triumphant"
+    },
+    {
+      "id": "BWL-096",
+      "text": "Pause at the line. One breath. Then throw.",
+      "category": "bowling-as-life",
+      "moments": [
+        "mental-game"
+      ],
+      "mood": "calm"
+    },
+    {
+      "id": "BWL-097",
+      "text": "There's no such thing as a wasted night at the lanes with people you like.",
+      "category": "bowling-as-life",
+      "moments": [
+        "adjusting",
+        "team-and-fun"
+      ],
+      "mood": "tender"
+    },
+    {
+      "id": "BWL-098",
+      "text": "The last frame is just a frame. Bowl it the same as the first.",
+      "category": "bowling-as-life",
+      "moments": [
+        "tenth-frame"
+      ],
+      "mood": "focused"
+    },
+    {
+      "id": "BWL-099",
+      "text": "Pick a side and commit. Half-hearted split shots never fall.",
+      "category": "bowling-as-life",
+      "moments": [
+        "split",
+        "mental-game"
+      ],
+      "mood": "gritty",
+      "pins_left": [
+        4,
+        6
+      ]
+    },
+    {
+      "id": "BWL-100",
+      "text": "The game's not over until the last pin stops wobbling.",
+      "category": "bowling-as-life",
+      "moments": [
+        "tenth-frame"
+      ],
+      "mood": "triumphant"
+    },
+    {
+      "id": "SDL-093",
+      "text": "Doesn't matter how many gutter balls you throw tonight. What matters is that you keep showing up to practice.",
+      "category": "optimism",
+      "moments": [
+        "gutter",
+        "practice"
+      ],
+      "mood": "triumphant"
+    },
+    {
+      "id": "CCH-022",
+      "text": "Celebrate the spare as loud as the strike. That's how kids learn every shot matters.",
+      "category": "coaching",
+      "moments": [
+        "strike",
+        "spare",
+        "team-and-fun",
+        "coaching"
+      ],
+      "mood": "warm"
+    },
+    {
+      "id": "CCH-044",
+      "text": "Lead with patience. You're not just building bowlers. You're building people.",
+      "category": "coaching",
+      "moments": [
+        "team-and-fun"
+      ],
+      "mood": "tender"
+    },
+    {
+      "id": "CCH-046",
+      "text": "Smile on the lanes. Kids mirror their coaches.",
+      "category": "coaching",
+      "moments": [
+        "adjusting",
+        "team-and-fun",
+        "coaching"
+      ],
+      "mood": "warm"
+    },
+    {
+      "id": "CCH-073",
+      "text": "Teach kids to set goals they control: a clean approach, a good spare, a good attitude.",
+      "category": "coaching",
+      "moments": [
+        "spare",
+        "team-and-fun",
+        "coaching"
+      ],
+      "mood": "focused"
+    },
+    {
+      "id": "HUM-005",
+      "text": "Some days you're the bowling ball. Some days you're the 10-pin, wobbling and refusing to fall.",
+      "category": "humor",
+      "moments": [
+        "split",
+        "tenth-frame"
+      ],
+      "mood": "playful",
+      "pins_left": [
+        10
+      ]
+    },
+    {
+      "id": "HUM-027",
+      "text": "Confidence is wearing rental bowling shoes like they're designer.",
+      "category": "humor",
+      "moments": [
+        "mental-game",
+        "team-and-fun"
+      ],
+      "mood": "playful"
+    },
+    {
+      "id": "HUM-032",
+      "text": "Whoever said money can't buy happiness never bought a new bowling ball.",
+      "category": "humor",
+      "moments": [
+        "team-and-fun"
+      ],
+      "mood": "playful"
+    },
+    {
+      "id": "HUM-044",
+      "text": "Nobody looks cool walking back from a gutter ball. That's the beauty of it.",
+      "category": "humor",
+      "moments": [
+        "gutter"
+      ],
+      "mood": "playful"
+    },
+    {
+      "id": "HUM-070",
+      "text": "Keep calm and check the lane conditions.",
+      "category": "humor",
+      "moments": [
+        "adjusting",
+        "mental-game"
+      ],
+      "mood": "playful"
+    },
+    {
+      "id": "HUM-072",
+      "text": "A strike is great. A strike when somebody's actually watching is legendary.",
+      "category": "humor",
+      "moments": [
+        "strike"
+      ],
+      "mood": "playful"
+    }
+  ]
+}

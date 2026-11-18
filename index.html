@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bowling Hub — Monument Bowling, Kingpin Academy &amp; Strikebook</title>
+<meta name="description" content="One home for Monument Bowling, Kingpin Academy, and the Strikebook score tracker.">
+<meta name="theme-color" content="#800020">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23800020'/%3E%3Cellipse cx='32' cy='20' rx='7' ry='8' fill='%23fbf9f8'/%3E%3Cpath d='M26 30c-4 8-8 14-5 22h22c3-8-1-14-5-22z' fill='%23fbf9f8'/%3E%3Crect x='25' y='36' width='14' height='3' fill='%23800020'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #FBF9F8;
+    --card: #FFFFFF;
+    --red: #800020;
+    --red-2: #5E0017;
+    --red-tint: #F6E6E9;
+    --gold: #C99A3B;
+    --ink: #1F1B18;
+    --ink-soft: #655E56;
+    --line: #E8DEDF;
+    --shadow: 0 1px 2px rgba(31,27,24,.06), 0 10px 24px rgba(31,27,24,.08);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #151112;
+      --card: #211A1C;
+      --red: #E0687F;
+      --red-2: #C44B63;
+      --red-tint: #3A1A21;
+      --gold: #E3B25A;
+      --ink: #F1EBE2;
+      --ink-soft: #B3AA9D;
+      --line: #3C3135;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 12px 28px rgba(0,0,0,.45);
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.55;
+    min-height: 100vh;
+  }
+  .wrap { max-width: 920px; margin-inline: auto; padding-inline: 20px; }
+  h1, h2, h3, .quote-text { font-family: Georgia, "Times New Roman", serif; }
+
+  /* Hero */
+  .hero { text-align: center; padding-block: 56px 28px; }
+  .eyebrow { text-transform: uppercase; letter-spacing: .16em; font-size: .78rem; font-weight: 700; color: var(--ink-soft); }
+  h1 { font-size: clamp(2.2rem, 7vw, 3.4rem); line-height: 1.1; margin: 10px 0 12px; color: var(--red); text-wrap: balance; }
+  .lead { max-width: 560px; margin: 0 auto; color: var(--ink-soft); font-size: 1.05rem; text-wrap: balance; }
+
+  /* Quote card */
+  .quote-card {
+    position: relative;
+    margin: 28px auto 8px;
+    max-width: 720px;
+    padding: 44px 36px 28px;
+    border-radius: 22px;
+    color: #fff;
+    background:
+      radial-gradient(120% 90% at 100% 0%, rgba(201,154,59,.28), transparent 55%),
+      linear-gradient(145deg, #800020 0%, #5E0017 100%);
+    box-shadow: 0 2px 4px rgba(31,27,24,.1), 0 18px 40px rgba(94,0,23,.28);
+    overflow: hidden;
+    isolation: isolate;
+  }
+  @media (prefers-color-scheme: dark) {
+    .quote-card { background: radial-gradient(120% 90% at 100% 0%, rgba(227,178,90,.22), transparent 55%), linear-gradient(145deg, #5E0017 0%, #3A0310 100%); }
+  }
+  .quote-card::before {            /* lane-board stripes */
+    content: ""; position: absolute; inset: 0; z-index: -1; opacity: .07;
+    background: repeating-linear-gradient(90deg, #fff 0 2px, transparent 2px 28px);
+  }
+  .quote-mark {
+    position: absolute; top: -6px; left: 22px;
+    font-family: Georgia, serif; font-size: 8rem; line-height: 1; color: var(--gold); opacity: .55;
+    pointer-events: none; user-select: none;
+  }
+  .quote-label { font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; font-weight: 700; color: #F0D9A6; margin: 0 0 14px; }
+  .quote-text {
+    margin: 0; font-size: clamp(1.35rem, 4.2vw, 1.9rem); line-height: 1.35; font-style: italic;
+    text-wrap: balance; transition: opacity .25s ease, transform .25s ease;
+  }
+  .quote-text.swap { opacity: 0; transform: translateY(6px); }
+  .quote-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 24px; flex-wrap: wrap; }
+  .pins { display: flex; gap: 6px; align-items: flex-end; opacity: .85; }
+  .pins svg { width: 14px; height: 30px; fill: #FBF9F8; }
+  .quote-btn {
+    font: inherit; font-weight: 600; font-size: .9rem; cursor: pointer;
+    color: #fff; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.35);
+    padding: 9px 18px; border-radius: 999px; transition: background .15s;
+  }
+  .quote-btn:hover { background: rgba(255,255,255,.26); }
+  .quote-btn:focus-visible, .tile:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+
+  /* Link tiles */
+  .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); padding-block: 36px 24px; }
+  .tile {
+    display: flex; flex-direction: column; gap: 6px; text-decoration: none; color: inherit;
+    background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 24px 22px;
+    box-shadow: var(--shadow); transition: transform .15s ease, border-color .15s ease;
+  }
+  .tile:hover { transform: translateY(-3px); border-color: var(--red); }
+  .tile .icon {
+    width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center;
+    background: var(--red-tint); color: var(--red); margin-bottom: 8px;
+  }
+  .tile .icon svg { width: 26px; height: 26px; }
+  .tile h2 { font-size: 1.25rem; margin: 0; }
+  .tile p { margin: 0; color: var(--ink-soft); font-size: .95rem; flex: 1; }
+  .tile .go { margin-top: 10px; font-weight: 700; font-size: .9rem; color: var(--red); }
+  .tile .go::after { content: " →"; }
+
+  footer { text-align: center; color: var(--ink-soft); font-size: .85rem; padding-block: 24px 48px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .quote-text, .tile { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero wrap">
+  <div class="eyebrow">Berkshire County bowling</div>
+  <h1>Bowling Hub</h1>
+  <p class="lead">Team info, lessons, and a score tracker, all in one place.</p>
+
+  <section class="quote-card" aria-label="Bowling quote">
+    <span class="quote-mark" aria-hidden="true">“</span>
+    <p class="quote-label">Quote of the frame</p>
+    <p class="quote-text" id="quote-text" aria-live="polite">Strikes get the cheers. Spares win the games.</p>
+    <div class="quote-foot">
+      <div class="pins" aria-hidden="true">
+        <svg viewBox="0 0 14 30"><path d="M7 0a3.5 4 0 0 1 3.5 4c0 2-1 3-1.5 4 2 3 5 7 5 13 0 4-2 9-7 9s-7-5-7-9c0-6 3-10 5-13-.5-1-1.5-2-1.5-4A3.5 4 0 0 1 7 0z"/></svg>
+        <svg viewBox="0 0 14 30"><path d="M7 0a3.5 4 0 0 1 3.5 4c0 2-1 3-1.5 4 2 3 5 7 5 13 0 4-2 9-7 9s-7-5-7-9c0-6 3-10 5-13-.5-1-1.5-2-1.5-4A3.5 4 0 0 1 7 0z"/></svg>
+        <svg viewBox="0 0 14 30"><path d="M7 0a3.5 4 0 0 1 3.5 4c0 2-1 3-1.5 4 2 3 5 7 5 13 0 4-2 9-7 9s-7-5-7-9c0-6 3-10 5-13-.5-1-1.5-2-1.5-4A3.5 4 0 0 1 7 0z"/></svg>
+      </div>
+      <button type="button" class="quote-btn" id="quote-btn" aria-label="Show a different quote">New quote</button>
+    </div>
+  </section>
+</header>
+
+<main class="wrap">
+  <div class="grid">
+    <a class="tile" href="https://cartoticus.github.io/MonumentBowling/">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3 8v2h18V8z"/><path d="M5 10v8M9.5 10v8M14.5 10v8M19 10v8"/><path d="M3 21h18"/></svg>
+      </span>
+      <h2>Monument Bowling</h2>
+      <p>Monument Mountain Regional High School team: season info, schedule, and roster sign-up.</p>
+      <span class="go">Visit the team site</span>
+    </a>
+
+    <a class="tile" href="https://cartoticus.github.io/KingpinAcademy/">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m2 9 10-5 10 5-10 5z"/><path d="M6 11.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-4.5"/><path d="M22 9v6"/></svg>
+      </span>
+      <h2>Kingpin Academy</h2>
+      <p>Learn to bowl from your first frame to league night: lessons, quizzes, scoring, and practice plans.</p>
+      <span class="go">Start learning</span>
+    </a>
+
+    <a class="tile" href="https://cartoticus.github.io/strikebook/">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5"/><path d="m9 12 2.2 2.2L16 9.5"/></svg>
+      </span>
+      <h2>Strikebook</h2>
+      <p>An offline bowling score tracker that installs to your phone's home screen.</p>
+      <span class="go">Open the app</span>
+    </a>
+  </div>
+</main>
+
+<footer class="wrap">Quotes from the Monument Bowling deck.</footer>
+
+<script>
+(function () {
+  // Same pool rules as the Monument Bowling site: skip coaching-category quotes and BWL-082.
+  var EXCLUDE_IDS = { "BWL-082": true };
+  var LIVE = "https://cartoticus.github.io/MonumentBowling/assets/quotes.json"; // always current
+  var LOCAL = "assets/quotes.json";                                             // bundled fallback
+
+  var textEl = document.getElementById("quote-text");
+  var btn = document.getElementById("quote-btn");
+  var pool = [], last = -1;
+
+  function load(url) {
+    return fetch(url, { cache: "no-cache" }).then(function (r) {
+      if (!r.ok) throw new Error(url);
+      return r.json();
+    });
+  }
+  function usable(data) {
+    return (data.quotes || []).filter(function (q) {
+      return q.text && q.category !== "coaching" && !EXCLUDE_IDS[q.id];
+    });
+  }
+  function show(animate) {
+    if (!pool.length) return;
+    var i;
+    do { i = Math.floor(Math.random() * pool.length); } while (pool.length > 1 && i === last);
+    last = i;
+    function set() { textEl.textContent = pool[i].text; textEl.classList.remove("swap"); }
+    if (animate && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      textEl.classList.add("swap");
+      setTimeout(set, 220);
+    } else { set(); }
+  }
+
+  load(LIVE).catch(function () { return load(LOCAL); })
+    .then(function (data) { pool = usable(data); show(false); })
+    .catch(function () { /* keep the default quote already in the HTML */ });
+
+  btn.addEventListener("click", function () { show(true); });
+})();
+</script>
+</body>
+</html>
